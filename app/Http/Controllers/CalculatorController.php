@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Classes\Calculator;
-use Illuminate\Http\Request;
+use App\Http\Requests\CalculatorRequest;
 
 class CalculatorController extends Controller
 {
@@ -12,7 +12,7 @@ class CalculatorController extends Controller
         return view('calculator');
     }
 
-    public function calculate(Request $request)
+    public function calculate(CalculatorRequest $request)
     {
         $calculator = new Calculator();
 
